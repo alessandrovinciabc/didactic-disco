@@ -1,5 +1,15 @@
 .DropDownMenu__content {
+  visibility: hidden;
+
   width: 100%;
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.DropDownMenu__content:hover {
+  visibility: visible;
+}
+
+.DropDownMenu__button:hover + .DropDownMenu__content {
+  visibility: visible;
 }
