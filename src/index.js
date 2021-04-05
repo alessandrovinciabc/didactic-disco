@@ -1,1 +1,3 @@
-import DropDownMenu from '../Components/DropDownMenu/DropDownMenu__button.js';
+import InitializeDropDownMenus from '../Components/DropDownMenu/DropDownMenu__button.js';
+
+InitializeDropDownMenus();

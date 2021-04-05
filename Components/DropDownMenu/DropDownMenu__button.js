@@ -17,4 +17,4 @@ let initializeDropDownMenus = () => {
   };
 };
 
-export default initializeDropDownMenus();
+export default initializeDropDownMenus;
