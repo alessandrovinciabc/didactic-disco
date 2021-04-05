@@ -13,3 +13,7 @@
 .DropDownMenu__button:hover + .DropDownMenu__content {
   visibility: visible;
 }
+
+.DropDownMenu__content--visible {
+  visibility: visible;
+}
