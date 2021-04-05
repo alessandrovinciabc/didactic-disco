@@ -2,6 +2,7 @@
 @import './DropDownMenu/DropDownMenu__button.css';
 @import './DropDownMenu/DropDownMenu__content.css';
 @import './DropDownMenu/DropDownMenu__item.css';
+@import './DropDownMenu/DropDownMenu__link.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
