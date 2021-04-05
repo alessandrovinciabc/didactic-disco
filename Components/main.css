@@ -1,0 +1,13 @@
+@import './DropDownMenu/DropDownMenu.css';
+@import './DropDownMenu/DropDownMenu__button.css';
+@import './DropDownMenu/DropDownMenu__item.css';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

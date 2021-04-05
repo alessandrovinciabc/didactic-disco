@@ -1,0 +1,12 @@
+.DropDownMenu__button {
+  width: 100%;
+
+  border: 0;
+  padding: 0;
+  outline: 0;
+
+  box-sizing: border-box;
+}
+
+.DropDownMenu__button:hover {
+}
