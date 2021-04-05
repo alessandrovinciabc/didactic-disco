@@ -1,6 +1,6 @@
 .DropDownMenu__button {
   width: 100%;
-  height: 2rem;
+  height: var(--button-height);
 
   border: 0;
   padding: 3px 7px;

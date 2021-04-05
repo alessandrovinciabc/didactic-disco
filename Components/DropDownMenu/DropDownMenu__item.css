@@ -2,6 +2,8 @@
   width: 100%;
   height: 2rem;
 
+  padding: 5px 1rem;
+
   cursor: pointer;
 
   display: flex;

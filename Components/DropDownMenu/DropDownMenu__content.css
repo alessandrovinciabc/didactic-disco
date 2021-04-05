@@ -1,7 +1,10 @@
 .DropDownMenu__content {
+  position: absolute;
+  top: var(--button-height);
+
   visibility: hidden;
 
-  width: 100%;
+  width: fit-content;
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -14,6 +17,8 @@
   visibility: visible;
 }
 
-.DropDownMenu__content--visible {
-  visibility: visible;
+@media (hover: none) {
+  .DropDownMenu__content--visible {
+    visibility: visible;
+  }
 }

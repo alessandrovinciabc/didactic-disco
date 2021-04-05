@@ -1,4 +1,6 @@
 .DropDownMenu {
+  position: relative;
+
   border-radius: 5px;
 
   min-width: 100px;
@@ -6,4 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /*Variables*/
+  --button-height: 2rem;
 }
