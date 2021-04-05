@@ -6,11 +6,5 @@
   padding: 3px 7px;
   outline: 0;
 
-  background-color: rgba(96, 192, 87, 0.8);
-
   box-sizing: border-box;
-}
-
-.DropDownMenu__button:hover {
-  background-color: rgb(96, 192, 87);
 }

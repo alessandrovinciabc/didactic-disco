@@ -26,3 +26,12 @@ body {
 
   font-family: 'Roboto', sans-serif;
 }
+
+/*Customize components*/
+.DropDownMenu__button--green {
+  background-color: rgba(96, 192, 87, 0.8);
+}
+
+.DropDownMenu__button--green:hover {
+  background-color: rgb(96, 192, 87);
+}
