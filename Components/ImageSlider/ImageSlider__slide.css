@@ -1,0 +1,23 @@
+.ImageSlider__slide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+  width: 100%;
+}
+
+.ImageSlider__slide--visible {
+  display: flex;
+}
+
+.ImageSlider__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
