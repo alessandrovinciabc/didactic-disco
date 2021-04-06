@@ -1,0 +1,8 @@
+.MobileMenu__content {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: auto;
+
+  background-color: #252525;
+}

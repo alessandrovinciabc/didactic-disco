@@ -1,6 +1,7 @@
 @import './MobileMenu/MobileMenu.css';
 @import './MobileMenu/MobileMenu__item.css';
 @import './MobileMenu/MobileMenu__button.css';
+@import './MobileMenu/MobileMenu__content.css';
 
 *,
 *::before,

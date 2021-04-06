@@ -1,4 +1,4 @@
-import initializeDropDownButtons from './DropDownMenu/DropDownMenu__button.js';
+import initializeDropDownButtons from './DropDownMenu__button.js';
 
 let initializeEverything = () => {
   initializeDropDownButtons();

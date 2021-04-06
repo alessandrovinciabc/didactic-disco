@@ -6,4 +6,10 @@
 
   background-color: #252525;
   color: white;
+
+  overflow: hidden;
+}
+
+.MobileMenu--expanded {
+  height: auto;
 }
