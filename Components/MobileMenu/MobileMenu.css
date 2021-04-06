@@ -1,0 +1,9 @@
+.MobileMenu {
+  width: 100%;
+  height: 2.8rem;
+
+  display: flex;
+
+  background-color: #252525;
+  color: white;
+}
