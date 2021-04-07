@@ -116,24 +116,28 @@ let handleNavigationDots = (e) => {
   }
 };
 
-let imageSliders = document.querySelectorAll('.ImageSlider');
+let initializeImageSliders = () => {
+  let imageSliders = document.querySelectorAll('.ImageSlider');
 
-if (imageSliders) {
-  imageSliders.forEach((slider) => {
-    let arrows, groupOfDots;
-    arrows = generateArrowsFor(slider);
-    groupOfDots = generateDotsFor(slider);
+  if (imageSliders) {
+    imageSliders.forEach((slider) => {
+      let arrows, groupOfDots;
+      arrows = generateArrowsFor(slider);
+      groupOfDots = generateDotsFor(slider);
 
-    if (getCurrentSlide(slider) === -1) {
-      let firstSlide = slider.querySelector('.ImageSlider__slide');
-      firstSlide.classList.add('ImageSlider__slide--visible');
+      if (getCurrentSlide(slider) === -1) {
+        let firstSlide = slider.querySelector('.ImageSlider__slide');
+        firstSlide.classList.add('ImageSlider__slide--visible');
 
-      let firstDot = slider.querySelector('.ImageSlider__navigation-dot');
-      firstDot.classList.add('ImageSlider__navigation-dot--active');
-    }
+        let firstDot = slider.querySelector('.ImageSlider__navigation-dot');
+        firstDot.classList.add('ImageSlider__navigation-dot--active');
+      }
 
-    groupOfDots.addEventListener('click', handleNavigationDots);
-    arrows[0].addEventListener('click', showPreviousSlide);
-    arrows[1].addEventListener('click', showNextSlide);
-  });
-}
+      groupOfDots.addEventListener('click', handleNavigationDots);
+      arrows[0].addEventListener('click', showPreviousSlide);
+      arrows[1].addEventListener('click', showNextSlide);
+    });
+  }
+};
+
+export default initializeImageSliders;

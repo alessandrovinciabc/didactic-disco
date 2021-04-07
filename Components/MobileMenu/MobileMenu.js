@@ -7,10 +7,12 @@ let getAllMenus = () => {
   return document.querySelectorAll('.MobileMenu');
 };
 
-document.addEventListener('click', function (e) {
-  if (e.target.classList.contains('MobileMenu__button')) {
-    e.target.parentNode.classList.toggle('MobileMenu--expanded');
-  }
-});
+let initializeMobileMenus = () => {
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('MobileMenu__button')) {
+      e.target.parentNode.classList.toggle('MobileMenu--expanded');
+    }
+  });
+};
 
-export default {};
+export default initializeMobileMenus;
