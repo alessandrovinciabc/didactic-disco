@@ -12,7 +12,7 @@ let generateArrowsFor = (container) => {
   return [newLeftArrow, newRightArrow];
 };
 
-let showPreviousSlide = (e) => {
+let displaySlide = (e, conditionCallback) => {
   let slider, slides, currentSlide, indexOfCurrentSlide;
 
   slider = e.target.parentNode;
@@ -23,18 +23,31 @@ let showPreviousSlide = (e) => {
   );
   indexOfCurrentSlide = slides.indexOf(currentSlide);
 
-  let newCurrentIndex;
-  if (indexOfCurrentSlide) {
-    newCurrentIndex = indexOfCurrentSlide - 1;
-  } else {
-    newCurrentIndex = slides.length - 1;
-  }
+  let newCurrentIndex = conditionCallback(slides, indexOfCurrentSlide);
 
   currentSlide.classList.remove('ImageSlider__slide--visible');
   slides[newCurrentIndex].classList.add('ImageSlider__slide--visible');
 };
 
-let showNextSlide = (e) => {};
+let showPreviousSlide = (e) => {
+  displaySlide(e, (slides, indexOfCurrentSlide) => {
+    if (indexOfCurrentSlide) {
+      return indexOfCurrentSlide - 1;
+    } else {
+      return slides.length - 1;
+    }
+  });
+};
+
+let showNextSlide = (e) => {
+  displaySlide(e, (slides, indexOfCurrentSlide) => {
+    if (indexOfCurrentSlide === slides.length - 1) {
+      return 0;
+    } else {
+      return indexOfCurrentSlide + 1;
+    }
+  });
+};
 
 if (imageSliders) {
   imageSliders.forEach((slider) => {
