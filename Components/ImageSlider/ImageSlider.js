@@ -116,7 +116,7 @@ let handleNavigationDots = (e) => {
   }
 };
 
-let initializeImageSliders = () => {
+let initializeImageSliders = (timeInSeconds) => {
   let imageSliders = document.querySelectorAll('.ImageSlider');
 
   if (imageSliders) {
@@ -136,6 +136,12 @@ let initializeImageSliders = () => {
       groupOfDots.addEventListener('click', handleNavigationDots);
       arrows[0].addEventListener('click', showPreviousSlide);
       arrows[1].addEventListener('click', showNextSlide);
+
+      if (timeInSeconds > 0) {
+        setInterval(() => {
+          showNextSlide({ target: slider });
+        }, timeInSeconds * 1000); //convert seconds in milliseconds
+      }
     });
   }
 };
