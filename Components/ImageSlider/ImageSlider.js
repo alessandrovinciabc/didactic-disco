@@ -56,7 +56,7 @@ let displaySlide = (e, conditionCallback) => {
   slider = e.target.parentNode;
   slides = Array.from(slider.querySelectorAll('.ImageSlider__slide'));
 
-  currentSlide = document.querySelector(
+  currentSlide = slider.querySelector(
     '.ImageSlider__slide.ImageSlider__slide--visible'
   );
   indexOfCurrentSlide = slides.indexOf(currentSlide);
