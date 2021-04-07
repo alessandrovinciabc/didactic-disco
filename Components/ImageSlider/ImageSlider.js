@@ -48,6 +48,16 @@ let generateDotsFor = (slider) => {
   return navigationGroup;
 };
 
+let setDot = (slider, number) => {
+  let currentDot, dots;
+
+  currentDot = slider.querySelector('.ImageSlider__navigation-dot--active');
+  dots = Array.from(slider.querySelectorAll('.ImageSlider__navigation-dot'));
+
+  currentDot.classList.remove('ImageSlider__navigation-dot--active');
+  dots[number].classList.add('ImageSlider__navigation-dot--active');
+};
+
 let displaySlide = (slider, conditionCallback) => {
   let slides, currentSlide, indexOfCurrentSlide;
 
@@ -62,6 +72,8 @@ let displaySlide = (slider, conditionCallback) => {
 
   currentSlide.classList.remove('ImageSlider__slide--visible');
   slides[newCurrentIndex].classList.add('ImageSlider__slide--visible');
+
+  setDot(slider, newCurrentIndex);
 };
 
 let showPreviousSlide = (e) => {
