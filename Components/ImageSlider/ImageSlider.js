@@ -3,11 +3,9 @@ let getNumberOfSlides = (slider) => {
 };
 
 let getCurrentSlide = (slider) => {
-  let slides, currentSlide;
+  let currentSlide;
 
-  slides = Array.from(slider.querySelectorAll('.ImageSlider__slide'));
-
-  currentSlide = document.querySelector(
+  currentSlide = slider.querySelector(
     '.ImageSlider__slide.ImageSlider__slide--visible'
   );
 
@@ -97,6 +95,10 @@ let imageSliders = document.querySelectorAll('.ImageSlider');
 
 if (imageSliders) {
   imageSliders.forEach((slider) => {
+    if (getCurrentSlide(slider) === -1) {
+      let firstSlide = slider.querySelector('.ImageSlider__slide');
+      firstSlide.classList.add('ImageSlider__slide--visible');
+    }
     let arrows = generateArrowsFor(slider);
     let groupOfDots = generateDotsFor(slider);
     groupOfDots.addEventListener('click', handleNavigationDots);
