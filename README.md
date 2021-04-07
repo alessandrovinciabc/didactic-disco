@@ -11,9 +11,9 @@
 
 This is a training project I've made to practice with the BEM methodology. Here I've created 3 different "vanilla" reusable components:
 
-- A drop down menu [Preview]()
-- A mobile menu [Preview]()
-- An image slider [Preview]()
+- A drop down menu [Preview](https://alessandrovinciabc.github.io/didactic-disco/dropdown.html)
+- A mobile menu [Preview](https://alessandrovinciabc.github.io/didactic-disco/mobilemenu.html)
+- An image slider [Preview](https://alessandrovinciabc.github.io/didactic-disco/slider.html)
 
 ## Technologies
 
