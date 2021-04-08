@@ -116,14 +116,23 @@ let handleNavigationDots = (e) => {
   }
 };
 
+let currentInterval;
+
 let initializeImageSliders = (timeInSeconds) => {
   let imageSliders = document.querySelectorAll('.ImageSlider');
+  const IsTimed = timeInSeconds > 0;
 
   if (imageSliders) {
     imageSliders.forEach((slider) => {
       let arrows, groupOfDots;
       arrows = generateArrowsFor(slider);
       groupOfDots = generateDotsFor(slider);
+
+      let startSliderInterval = () => {
+        return setInterval(() => {
+          showNextSlide({ target: slider });
+        }, timeInSeconds * 1000); //convert seconds in milliseconds
+      };
 
       if (getCurrentSlide(slider) === -1) {
         let firstSlide = slider.querySelector('.ImageSlider__slide');
@@ -136,11 +145,26 @@ let initializeImageSliders = (timeInSeconds) => {
       groupOfDots.addEventListener('click', handleNavigationDots);
       arrows[0].addEventListener('click', showPreviousSlide);
       arrows[1].addEventListener('click', showNextSlide);
+      slider.addEventListener('click', function (e) {
+        let isAnArrow, isADot;
 
-      if (timeInSeconds > 0) {
-        setInterval(() => {
-          showNextSlide({ target: slider });
-        }, timeInSeconds * 1000); //convert seconds in milliseconds
+        isAnArrow = e.target.classList.contains('ImageSlider__left-arrow');
+        isAnArrow = isAnArrow
+          ? true
+          : e.target.classList.contains('ImageSlider__right-arrow');
+
+        isADot = e.target.classList.contains('ImageSlider__navigation-dot');
+
+        if (isAnArrow || isADot) {
+          if (IsTimed) {
+            clearInterval(currentInterval);
+            currentInterval = startSliderInterval();
+          }
+        }
+      });
+
+      if (IsTimed) {
+        currentInterval = startSliderInterval();
       }
     });
   }
